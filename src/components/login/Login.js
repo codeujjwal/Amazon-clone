@@ -1,7 +1,7 @@
 import React from "react";
 import "./login.css";
 import { Link } from "@material-ui/core";
-import logo from "../../images/logo.png";
+
 
 function Login() {
   return (
