@@ -1,0 +1,11 @@
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.login_container {
+}
+.login_logo {
+  height: 200px;
+}

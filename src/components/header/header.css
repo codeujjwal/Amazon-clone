@@ -28,12 +28,18 @@
   background-color: #cd9042;
 }
 
-.header > img {
+.logo {
   margin: 10px 20px;
+  height: 30px;
+  width: 110px;
 }
 .header_nav {
   display: flex;
   margin: 5px 15px;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 .header_optionlineoone {
   font-size: 10px;
