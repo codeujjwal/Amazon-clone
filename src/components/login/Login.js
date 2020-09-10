@@ -3,6 +3,10 @@ import "./login.css";
 import { Link } from "@material-ui/core";
 import { auth } from "../../firebase/firebase";
 import { useHistory } from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 16c782353ebe650780c467320df67634b6da277a
 
 function Login() {
   const [email, setEmail] = useState("");
