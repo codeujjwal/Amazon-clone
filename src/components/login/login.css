@@ -53,8 +53,3 @@
   border: 1px solid darkgray;
   margin-top: 10px;
 }
-
-button:focus {
-  outline: none;
-  border: none;
-}
