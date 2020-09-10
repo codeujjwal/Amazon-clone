@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link } from "@material-ui/core";
-<<<<<<< HEAD
 import { auth } from "../../firebase/firebase";
 import { useHistory } from "react-router-dom";
-=======
-
->>>>>>> 7149dbaa3cf62f43b916d198d1e2dff452b4edfa
 
 function Login() {
   const [email, setEmail] = useState("");
