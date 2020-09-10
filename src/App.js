@@ -10,7 +10,6 @@ import { auth } from "./firebase/firebase";
 
 function App() {
   const [, dispatch] = useRedux();
-
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -25,7 +24,7 @@ function App() {
         });
       }
     });
-  }, []);
+  }, [dispatch]);
   return (
     <Router>
       <div className="App">
