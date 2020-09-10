@@ -9,7 +9,7 @@ import { useRedux } from "./context api/StateProvider";
 import { auth } from "./firebase/firebase";
 
 function App() {
-  const [{}, dispatch] = useRedux();
+  const [, dispatch] = useRedux();
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
