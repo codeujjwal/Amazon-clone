@@ -6,13 +6,16 @@ import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import { useRedux } from "../../context api/StateProvider";
 
 function Checkout() {
-  const [{ basket }] = useRedux();
+  const [{ basket, user }] = useRedux();
+  const email = user?.email;
+  const username = email?.substring(0, email.indexOf("@"));
   return (
     <div>
       <div className="checkout">
         <div className="checkout_left">
           <img className="checkout_add" src={Add} alt="add" />
           <div className="checkout_title">
+            <h3>Hello, {username}</h3>
             <h2>Your Shopping Cart</h2>
           </div>
         </div>

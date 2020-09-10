@@ -37,6 +37,9 @@
   display: flex;
   margin: 5px 15px;
 }
+.auth {
+  cursor: pointer;
+}
 a {
   color: white;
   text-decoration: none;

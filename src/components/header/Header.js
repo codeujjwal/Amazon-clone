@@ -3,11 +3,24 @@ import "./header.css";
 import logo from "../../images/logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import { Link } from "react-router-dom";
 import { useRedux } from "../../context api/StateProvider";
+import { auth } from "../../firebase/firebase";
+import { useHistory, Link } from "react-router-dom";
 
 function Header() {
-  const [{ basket }] = useRedux();
+  const [{ basket, user }] = useRedux();
+  const history = useHistory();
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+      alert("signed out");
+    } else {
+      history.push("/login");
+    }
+  };
+
+  const email = user?.email;
+  const username = email?.substring(0, email.indexOf("@"));
 
   return (
     <div className="header">
@@ -21,11 +34,11 @@ function Header() {
         </div>
       </div>
       <div className="header_nav">
-        <div className="header_option">
-          <span className="header_optionlineoone">Hello Guest</span>
-          <Link to="/login">
-            <span className="header_optionlineotwo">Sign In</span>
-          </Link>
+        <div onClick={handleAuth} className="header_option auth">
+          <span className="header_optionlineoone">Hello {username}</span>
+          <span className="header_optionlineotwo">
+            {user ? "Sign Out" : "Sign In"}
+          </span>
         </div>
         <div className="header_option">
           <span className="header_optionlineoone">Returns</span>
