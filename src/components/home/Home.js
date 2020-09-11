@@ -14,6 +14,38 @@ function Home() {
       </div>
       <div className="home_row">
         <Product
+          title="Think Like a Monk Paperback – 8 September 2020"
+          image={
+            "https://images-na.ssl-images-amazon.com/images/I/41gVhoPaE5L._SX323_BO1,204,203,200_.jpg"
+          }
+          price={399}
+          rating={4}
+        />
+        <Product
+          title="Piraso Analog Black Dial Men's Watch-D&D-15"
+          image={
+            "https://images-na.ssl-images-amazon.com/images/I/81iXnzqRvaL._UX466_.jpg"
+          }
+          price={499}
+          rating={5}
+        />
+        <Product
+          title="Speed Reading: How to Double (or Triple) Your Reading Speed in Just 1 Hour!"
+          image={"https://m.media-amazon.com/images/I/51JnAcjm3nL.jpg"}
+          price={399}
+          rating={3}
+        />
+        <Product
+          title="Noise Shots X5 PRO True Wireless Earbuds Powered by Qualcomm aptX with 150 Hours Total Playtime (Hot Red)"
+          image={
+            "https://images-na.ssl-images-amazon.com/images/I/61id76o7VjL._SL1500_.jpg"
+          }
+          price={4499}
+          rating={2}
+        />
+      </div>
+      <div className="home_row">
+        <Product
           title="Redmi Note 9 Pro Max (Interstellar Black, 6GB RAM, 64GB Storage) - 64MP Quad Camera & Latest 8nm Snapdragon 720G"
           image={
             "https://i01.appmifile.com/webfile/globalimg/in/cms/BA2627B1-1735-7AE7-B5B3-304C3E73A99B.jpg"

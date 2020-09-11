@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/login/Login";
 import { useRedux } from "./context api/StateProvider";
 import { auth } from "./firebase/firebase";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [, dispatch] = useRedux();
@@ -34,6 +35,7 @@ function App() {
           <Route path="/checkout" component={Checkout} />
           <Route path="/login" component={Login} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
