@@ -3,6 +3,7 @@ import "./login.css";
 import { Link } from "@material-ui/core";
 import { auth } from "../../firebase/firebase";
 import { useHistory } from "react-router-dom";
+import logo from "./unnamed.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -30,11 +31,7 @@ function Login() {
   return (
     <div className="login">
       <Link to="/">
-        <img
-          className="login_logo"
-          src="https://lh3.googleusercontent.com/proxy/YMbSs8n62N7vKSvbXUAsTB7Uha6NiWC-VWNtUPxVoa6CkVzjM4nW2Qc97ayrJbJO3FGZ_Wbrdehp5L-QfQrZBQ-LBa2K5C7tNQ-B2OFmrA69KF8"
-          alt="logo"
-        />
+        <img className="login_logo" src={logo} alt="logo" />
       </Link>
       <div className="login_container">
         <h1>Sign In</h1>
