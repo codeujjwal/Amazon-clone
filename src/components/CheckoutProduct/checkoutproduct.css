@@ -40,3 +40,16 @@
 .cproduct_rating > .MuiSvgIcon-root {
   color: gold;
 }
+
+@media (max-width: 600px) {
+  .cproduct {
+    max-height: 500px;
+    flex-direction: column;
+  }
+  .cproduct_info > button {
+    padding: 5px 10px;
+  }
+  .cproduct > img {
+    margin: 20px 10px;
+  }
+}

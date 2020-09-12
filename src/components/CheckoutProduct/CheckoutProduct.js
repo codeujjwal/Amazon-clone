@@ -2,7 +2,7 @@ import React from "react";
 import "./checkoutproduct.css";
 import StarIcon from "@material-ui/icons/Star";
 import { useRedux } from "../../context api/StateProvider";
-function CheckoutProduct({ id, title, image, rating, price }) {
+function CheckoutProduct({ id, title, image, rating, price, nobutton }) {
   const [, dispatch] = useRedux();
   const removefrombasket = () => {
     dispatch({
@@ -26,7 +26,9 @@ function CheckoutProduct({ id, title, image, rating, price }) {
               <StarIcon />
             ))}
         </div>
-        <button onClick={removefrombasket}>Remove from Basket</button>
+        {nobutton ? null : (
+          <button onClick={removefrombasket}>Remove from Basket</button>
+        )}
       </div>
     </div>
   );

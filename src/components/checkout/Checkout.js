@@ -1,7 +1,7 @@
 import React from "react";
 import "./checkout.css";
 import Subtotal from "../subtotal/Subtotal";
-import Add from "../../images/add.png";
+import Add from "../../images/add2.jpg";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import { useRedux } from "../../context api/StateProvider";
 

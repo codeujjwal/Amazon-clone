@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   z-index: 100;
   padding: 5px 2px;
   top: 0;
@@ -13,12 +14,15 @@
 .header_search {
   display: flex;
   flex: 1;
+
+  min-width: 30px;
   align-items: center;
   border-radius: 24px;
 }
 .header_search > input {
   height: 12px;
   border: none;
+
   padding: 10px;
   width: 100%;
 }
@@ -65,4 +69,20 @@ a {
   margin: 5px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .header_search {
+    margin: 0px 15px;
+  }
+  .logo {
+    margin: 25px 15px;
+  }
+  .header_nav {
+    justify-content: space-around;
+    width: 100%;
+  }
+  .header_optionbasket {
+    margin: 13px;
+  }
 }

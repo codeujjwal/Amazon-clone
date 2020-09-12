@@ -41,3 +41,13 @@
 .Product_rating > .MuiSvgIcon-root {
   color: gold;
 }
+@media (max-width: 600px) {
+  .product {
+    width: 90%;
+    max-height: 500px;
+  }
+  .product > img {
+    max-height: 200px;
+    margin: 50px 0px;
+  }
+}

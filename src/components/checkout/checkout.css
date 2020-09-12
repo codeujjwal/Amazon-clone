@@ -19,6 +19,16 @@
 .example-leave {
   opacity: 1;
 }
+@media (max-width: 1000px) {
+  .checkout_right {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  .checkout {
+    flex-wrap: wrap;
+  }
+}
 
 .example-leave.example-leave-active {
   opacity: 0.01;
