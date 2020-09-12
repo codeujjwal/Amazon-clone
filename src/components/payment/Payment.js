@@ -1,38 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./payment.css";
 import add from "../../images/add.png";
 import { useRedux } from "../../context api/StateProvider";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
-import { CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { basketTotal } from "../../context api/Reducer";
 
 function Payment() {
-  // useEffect(() => {
-  //   const getClientSecret = async () => {
-  //     const response = await axios({
-  //       method: "/post",
-  //       url: `/payment/create?total=${basketTotal(basket)}`,
-  //     });
-  //   };
-  //   getClientSecret(response.data.clientSecret);
-  // }, [basket]);
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setProcessing(true);
+    dispatch({
+      type: "EMPTY_BASKET",
+    });
+    history.replace("/");
+    alert("YOUR ORDER IS PLACED");
   };
-  const handleChange = (e) => {
-    e.preventDefault();
-  };
-  const [{ basket, user }] = useRedux();
-  const [disabled, ]= useState(true);
-  const [processing, setProcessing] = useState("");
-  const [succedded, ] = useState(false);
-  const [error, ] = useState(null);
+  const [{ basket, user }, dispatch] = useRedux();
+  const history = useHistory();
 
-  // const stripe = useStripe();
-  // const elements = useElements();
   const email = user?.email;
   const username = email?.substring(0, email.indexOf("@"));
   return (
@@ -77,7 +63,6 @@ function Payment() {
           </div>
           <div className="payment_details">
             <form onSubmit={handleSubmit}>
-              <CardElement onChange={handleChange} />
               <div className="payment_price">
                 <CurrencyFormat
                   renderText={(value) => (
@@ -93,11 +78,8 @@ function Payment() {
                   prefix={"Rs "}
                   thousandSeparator={true}
                 />
-                <button disabled={processing || disabled || succedded}>
-                  <span>{processing ? <p>Proccessing</p> : "BUY NOW"}</span>
-                </button>
+                <button className="buynow">BUY NOW</button>
               </div>
-              {error && <div>{error}</div>}
             </form>
           </div>
         </div>
