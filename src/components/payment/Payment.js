@@ -4,7 +4,7 @@ import add from "../../images/add.png";
 import { useRedux } from "../../context api/StateProvider";
 import { Link } from "react-router-dom";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { basketTotal } from "../../context api/Reducer";
 
@@ -26,10 +26,10 @@ function Payment() {
     e.preventDefault();
   };
   const [{ basket, user }] = useRedux();
-  const [disabled, setDisabled] = useState(true);
+  const [disabled, ]= useState(true);
   const [processing, setProcessing] = useState("");
-  const [succedded, setSuccedded] = useState(false);
-  const [error, setError] = useState(null);
+  const [succedded, ] = useState(false);
+  const [error, ] = useState(null);
 
   // const stripe = useStripe();
   // const elements = useElements();
